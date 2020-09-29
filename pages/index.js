@@ -6,31 +6,29 @@ import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
+import { Editmode, ChunkCollection} from 'editmode-react'
+import * as post from '../lib/post'
+
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+      <Editmode projectId="prj_Zeny7bglCP5o">
+        <Layout>
+          <Head>
+            <title>Next.js Blog Example with {CMS_NAME}</title>
+          </Head>
+          <Container>
+            <Intro />
+            <ChunkCollection identifier="col_pk6NapV7YlH1" limit="1" tags={["heropost"]}>
+              <HeroPost {...post} />
+            </ChunkCollection>
+            <MoreStories />
+          </Container>
+        </Layout>
+      </Editmode>
     </>
   )
 }
