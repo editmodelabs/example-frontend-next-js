@@ -4433,10 +4433,10 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-editmode-react@^3.1.10:
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/editmode-react/-/editmode-react-3.1.10.tgz#c47e62e6e77c4afbfea6334097e5cca48d017837"
-  integrity sha512-m+DNVWmipKdieAQ7fx1pwAmTLbFVYEKtrFREYvNU4tj2NeLCcXZPkU8SBj8xWJR9aOT6POGeJTL9JpoNF9TW0w==
+editmode-react@3.1.11-canary.26.1a82781.0:
+  version "3.1.11-canary.26.1a82781.0"
+  resolved "https://registry.yarnpkg.com/editmode-react/-/editmode-react-3.1.11-canary.26.1a82781.0.tgz#cdb93639693218ee4dd88f171ef753199bca22a9"
+  integrity sha512-ZoT4/qSIWUuUm96YPTBY+dttGE0n8JLimJweqrpPmWaLWJLhA73j1QEW2ezH17T8QuneFM4J8dSHqgiRXetbUw==
   dependencies:
     "@emotion/hash" "^0.8.0"
     axios "^0.19.2"
